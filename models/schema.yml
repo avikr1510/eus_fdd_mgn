@@ -1,0 +1,13 @@
+version: 1
+sources:
+  - name: SRC_DBT_RAW
+    database: "{{env_var('DBT_ENV_DB')}}"
+    schema: "{{env_var('DBT_RAW_SCH')}}"
+    tables:
+      - name : dbt_raw_customer
+  - name: SRC_DBT_STG
+    database: "{{env_var('DBT_ENV_DB')}}"
+    schema: "{{env_var('DBT_STG_SCH')}}"
+    tables:
+      
+      - name : dbt_stg_customer      
